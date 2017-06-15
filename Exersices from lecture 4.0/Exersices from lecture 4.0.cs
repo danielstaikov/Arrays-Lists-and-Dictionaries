@@ -19,11 +19,14 @@ namespace Exersices_from_lecture_4._0
                 arrNumbers[i] = int.Parse(inputTokens[i]);
             }
             // някакви операции с масива
-            foreach (var number in arrNumbers)// във foreach елементите са read only
-            {
-                Console.Write(number+" ");
-            }
-            Console.WriteLine();
+
+           // foreach (var number in arrNumbers)// във foreach елементите са read only
+           // {
+           //     Console.Write(number+" ");
+           // }
+           // Console.WriteLine();
+
+            Console.WriteLine(string.Join(", ", arrNumbers)); //също печата стринга
         }
     }
 }
