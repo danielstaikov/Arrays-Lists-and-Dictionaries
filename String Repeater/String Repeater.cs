@@ -10,6 +10,21 @@ namespace String_Repeater
     {
         static void Main(string[] args)
         {
+            string word = Console.ReadLine();
+            int repeater = int.Parse(Console.ReadLine());
+            Console.WriteLine(RepeatString(word,repeater));
         }
+        static string RepeatString(string str, int count)
+        {
+            string repeatedString = null;
+
+            for (int i = 0; i < count; i++)
+            {
+                repeatedString = repeatedString + str;
+            }
+
+            return repeatedString;
+        }
+
     }
 }

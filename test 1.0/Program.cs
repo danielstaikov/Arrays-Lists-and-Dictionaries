@@ -4,18 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hello__Name_
+namespace test_1._0
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string name = Console.ReadLine();
-            GetHello(name);
-        }
-        static void GetHello(string name)
-        {
-            Console.WriteLine($"Hello, {name}!");
+            double number = int.Parse(Console.ReadLine());
+            double one = number % 10;
+            Console.WriteLine(one);
+            
         }
     }
 }
