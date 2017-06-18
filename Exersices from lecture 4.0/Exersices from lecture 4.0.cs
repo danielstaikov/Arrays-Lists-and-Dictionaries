@@ -10,13 +10,13 @@ namespace Exersices_from_lecture_4._0
     {
         static void Main(string[] args)
         {
- 
-            string[] inputTokens =Console.ReadLine().Split(' '); 
-            int[] arrNumbers = new int[inputTokens.Length];
+            int[] targetCoord = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            string[] commands =Console.ReadLine().Split(' '); 
+            int[] commandNumbers = new int[commands.Length];
 
-            for (int i = 0; i < arrNumbers.Length ; i++) 
+            for (int i = 0; i < commandNumbers.Length ; i++) 
             {
-                arrNumbers[i] = int.Parse(inputTokens[i]);
+                commandNumbers[i] = int.Parse(commands[i]);
             }
             // някакви операции с масива
 
@@ -26,7 +26,7 @@ namespace Exersices_from_lecture_4._0
            // }
            // Console.WriteLine();
 
-            Console.WriteLine(string.Join(", ", arrNumbers)); //също печата стринга
+            Console.WriteLine(string.Join(", ", commandNumbers)); //също печата стринга
         }
     }
 }
