@@ -10,19 +10,7 @@ namespace Ballistics_Training_2._0
     {
         static void Main(string[] args)
         {
-            using System;
-            using System.Collections.Generic;
-            using System.Linq;
-            using System.Text;
-            using System.Threading.Tasks;
 
-
-namespace _10.BallisticsTraining
-    {
-        class Program
-        {
-            static void Main(string[] args)
-            {
                 double[] target = Console.ReadLine().Split().Select(double.Parse).ToArray();
                 string[] input = Console.ReadLine().Split();
 
@@ -66,7 +54,4 @@ namespace _10.BallisticsTraining
                 }
             }
         }
-    }
-}
-    }
 }
