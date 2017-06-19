@@ -29,24 +29,15 @@ namespace Ballistics_Training
                         break;
                 }
 
-                if ((commands[i] == "right"|| commands[i] == "left") &&( int.Parse(commands[i+1]) >= 0))
+                if ((commands[i] == "right"|| commands[i] == "left") )
                 {
-                    coordX = coordX + (int.Parse(oper + commands[i + 1]));
+                    coordX = coordX + (int.Parse(oper) + int.Parse(commands[i + 1]));
                 }
-                else if ((commands[i] == "left") && (int.Parse(commands[i + 1]) < 0))
+                else 
                 {
-                    int a = int.Parse(commands[i + 1]) * (-1);
-                    coordX = coordX + a;
+                    coordY = coordY + (int.Parse(oper) + int.Parse(commands[i + 1]));
                 }
-                else if (((commands[i] == "up" || commands[i] == "down") && (int.Parse(commands[i + 1]) >= 0)))
-                {
-                    coordY = coordY + (int.Parse(oper + commands[i + 1]));
-                }
-                else
-                {
-                    int a = int.Parse(commands[i + 1]) * (-1);
-                    coordY = coordY + a;
-                }
+
 
 
             }

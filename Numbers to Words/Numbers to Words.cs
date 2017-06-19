@@ -47,12 +47,21 @@ namespace Numbers_to_Words
             string[] arrTenth = { "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" };
 
             string result = null;
+            bool zero = true;
  
                 int rem = number % 100;
 
-                if (rem<19)
+                if (rem<=19)
                 {
-                result = arrSingle[rem];
+                if (rem==0)
+                {
+                    zero = false;
+                }
+                else
+                {
+                    result = arrSingle[rem];
+                }
+                
                 }
                 else
                 {
@@ -72,7 +81,15 @@ namespace Numbers_to_Words
             }
             else
             {
-                result = arrSingle[number] + "-hundred and " + result;
+                if (!zero)
+                {
+                    result = arrSingle[number] + "-hundred";
+                }
+                else
+                {
+                    result = arrSingle[number] + "-hundred and " + result;
+                }
+                
             }   
                    
             return result;
