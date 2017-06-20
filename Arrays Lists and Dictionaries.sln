@@ -99,6 +99,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Power Plants", "Power Plant
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resizable Array", "Resizable Array\Resizable Array.csproj", "{5A0D1A9C-E7F4-41D8-B462-EEFC451776AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resizable Array 2.0", "Resizable Array 2.0\Resizable Array 2.0.csproj", "{81344932-885A-4103-B06F-9F30167AC75C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -297,6 +299,10 @@ Global
 		{5A0D1A9C-E7F4-41D8-B462-EEFC451776AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A0D1A9C-E7F4-41D8-B462-EEFC451776AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A0D1A9C-E7F4-41D8-B462-EEFC451776AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81344932-885A-4103-B06F-9F30167AC75C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81344932-885A-4103-B06F-9F30167AC75C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81344932-885A-4103-B06F-9F30167AC75C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81344932-885A-4103-B06F-9F30167AC75C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

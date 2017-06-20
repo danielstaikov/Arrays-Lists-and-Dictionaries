@@ -26,8 +26,8 @@ namespace Resizable_Array
                     switch ($"{inputToken[0]}")
                     {
                         case "push":
-                            additional = int.Parse($"inputToken[1]")
-                            arrNumber = GetPush(arrNumber, additional);
+                            additional = int.Parse($"inputToken[1]");
+
 
                             arrNumber[4] = int.Parse($"inputToken[1]");
                             break;
