@@ -2,18 +2,17 @@
 
 using System.Linq;
 
-namespace Resizable_Array_2._0
-{
+
     class Program
     {
         static int[] elements;
-        static int elementsLenght;
+        static int elementsLength;//elementsLength
 
         static void Main(string[] args)
         {
             string[] inputToken = Console.ReadLine().Split(' ');
             int[] elements = new int[4];
-            elementsLenght = 0;
+            elementsLength = 0;
 
             while (inputToken[0] != "end")
             {
@@ -22,56 +21,58 @@ namespace Resizable_Array_2._0
                 switch (command)
                 {
                     case "push":
-                        elements[elementsLenght] = int.Parse(inputToken[1]);
-                        elementsLenght++;
+                        elements[elementsLength] = int.Parse(inputToken[1]);
+                        elementsLength++;
 
-                        if (elementsLenght >= elements.Length)
+                        if (elementsLength >= elements.Length)
                         {
-                            GrowArrey();
+                            GrowArray();
                         }
                         break;
                     case "pop":
-                        //elements[elementsLenght] = 0;
-                        elementsLenght--;
+                        elements[elementsLength] = 0;
+                        elementsLength--;
                         break;
                     case "removeAt":
                         int index = int.Parse(inputToken[1]);
-                        ShiftArrey(index);
-                        elementsLenght--;
+                        ShiftArray(index);
+                        elementsLength--;
                         break;
                     case "clear":
-                        elementsLenght = 0;
+                        elementsLength = 0;
+                        break;
+                    default:
                         break;
                 }
                 inputToken = Console.ReadLine().Split(' ');
             }
-            PrintArrey();
+            PrintArray();
         }
-        static void PrintArrey()
+        static void PrintArray()
         {
-            for (int i = 0; i < elementsLenght; i++)
+            for (int cnt = 0; cnt < elementsLength; cnt++)
             {
-                Console.Write(elements[i]+" ");
+                Console.Write(elements[cnt] + " ");
             }
+
             Console.WriteLine();
         }
-        static void GrowArrey()
+        static void GrowArray()
         {
-            int[] newArr = new int[elementsLenght * 2];
+            int[] newArray = new int[elementsLength * 2];
 
-            for (int i = 0; i < elementsLenght; i++)
+            for (int cnt = 0; cnt < elementsLength; cnt++)
             {
-                newArr[i] = elements[i];
+                newArray[cnt] = elements[cnt];
             }
 
-            elements = newArr;
+            elements = newArray;
         }
-        static void ShiftArrey(int index)
+        static void ShiftArray(int index)
         {
-            for (int i = index+1; i < elementsLenght; i++)
+            for (int cnt = index + 1; cnt < elementsLength; cnt++)
             {
-                elements[i - 1] = elements[i];
+                elements[cnt - 1] = elements[cnt];
             }
         }
     }
-}
